@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RouteView Should render the component properly 1`] = `ShallowWrapper {}`;
+
+exports[`RouteView should test map state to props 1`] = `
+Object {
+  "coordinates": Array [],
+  "loading": false,
+}
+`;

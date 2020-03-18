@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MapsView component should test map state to props 1`] = `
+Object {
+  "loading": true,
+  "searchResult": Array [],
+}
+`;
+
+exports[`MapsView component should test the component renders without fail 1`] = `ShallowWrapper {}`;
