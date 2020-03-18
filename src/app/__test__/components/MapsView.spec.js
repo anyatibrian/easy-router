@@ -5,7 +5,9 @@ import MapsView from '../../components/MapsView'
 const props={
     coordinates:[], 
     handleRoutes:jest.fn(),
-    loading:false
+    loading:false,
+    destination:'kampala',
+    origin:'lira'
 }
 let wrapper
 let instance

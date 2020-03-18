@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, TouchableHighlight,ActivityIndicator} from 'rea
 import MapView,{PROVIDER_GOOGLE,Marker, Polyline} from 'react-native-maps'
 import Icons from './Icons'
 
-const MapsView = ({coordinates, handleRoutes,loading}) => {
+const MapsView = ({coordinates, handleRoutes,loading,destination,origin}) => {
     const coords = coordinates.map(([longitude, latitude])=>{
         return { latitude, longitude}
     })
@@ -29,6 +29,7 @@ const MapsView = ({coordinates, handleRoutes,loading}) => {
             {
               coords[coords.length-1]? <Marker
               coordinate={ coords[coords.length-1]}
+              title={origin}
               /> : null
             }
             
@@ -36,6 +37,7 @@ const MapsView = ({coordinates, handleRoutes,loading}) => {
                coords[0]? <Marker
                coordinate={ coords[0]}
                pinColor="green"
+               title={destination}
                />:null
             }
             </MapView>

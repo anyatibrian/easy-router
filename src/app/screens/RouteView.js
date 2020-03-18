@@ -9,7 +9,7 @@ export class RouteView extends Component {
         super(props)
         this.state={
             userLatitude:'',
-            userLongitude:''
+            userLongitude:'',
         }
     }
     
@@ -27,7 +27,7 @@ export class RouteView extends Component {
     }
     render() {
         const {userLatitude, userLongitude} = this.state
-        const { coordinates, loading} = this.props
+        const { coordinates, loading, route:{params:{originInfo, destinationInfo}}} = this.props
         return (
             <View>
                 <MapsView coordinates={coordinates}
@@ -35,6 +35,8 @@ export class RouteView extends Component {
                 userLongitude={userLongitude}
                 routingPoint={RoutingPoints}
                 handleRoutes={this.handleRoutes}
+                destination={destinationInfo.destination}
+                origin={originInfo.origin}
                 loading={loading}
                 />
             </View>

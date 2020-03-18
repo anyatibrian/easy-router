@@ -54,11 +54,13 @@ export class SetDestination extends Component {
       navigate("RouteView", {
           originInfo:{
               lat:lat,
-              lng:lng
+              lng:lng,
+              origin:origin
           },
           destinationInfo:{
               lat:destinationInput.lat,
-              lng:destinationInput.lng
+              lng:destinationInput.lng,
+              destination:destination
           }
       })
       
