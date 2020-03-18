@@ -77,4 +77,9 @@ describe('MapsView component', () => {
         
         expect(mapStateToProps(state)).toMatchSnapshot()
     })
+    it('should handle the ontext change', ()=>{
+        const formInput = wrapper.find('FormInputs').first()
+        formInput.props().onChangeText()
+        expect(wrapper).toMatchSnapshot()
+    })
 })

@@ -9,14 +9,15 @@ const props ={
     routeAction:jest.fn(),
     navigation:{
         navigate:jest.fn()
-    }
+    },
+    handleTextChange: jest.fn()
 }
 let instance
 let wrapper
 
 describe('Should test set Origin', () => {
     beforeEach(()=>{
-        wrapper = shallow(<SetOrigin {...props}/>)
+        wrapper = shallow(<SetOrigin {...props} />)
         instance = wrapper.instance()
     })
 
@@ -64,5 +65,11 @@ describe('Should test set Origin', () => {
             }
         }
         expect(mapStateToProps(state))
+    })
+    it('should test onchange event handler',()=>{
+        const formInput = wrapper.find('FormInputs').first()
+        formInput.props().onChangeText()
+        const handleChange = jest.spyOn(instance,'handleTextChange')
+        expect(handleChange).toHaveBeenCalledTimes(0)
     })
 })

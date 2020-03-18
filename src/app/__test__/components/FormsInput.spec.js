@@ -12,7 +12,4 @@ describe('MapsView component', () => {
     it("should test the component renders without fail", ()=>{
         expect(wrapper).toMatchSnapshot()
     })
-    it('should test the switch method',()=>{
-        console.log(instance)
-    })
 })

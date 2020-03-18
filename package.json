@@ -7,6 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "lint": "eslint .",
     "clear_jest": "jest --clearCache"
   },
@@ -38,6 +39,7 @@
     "@babel/runtime": "^7.8.7",
     "@react-native-community/eslint-config": "^0.0.7",
     "babel-jest": "^25.1.0",
+    "coveralls": "^3.0.9",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",

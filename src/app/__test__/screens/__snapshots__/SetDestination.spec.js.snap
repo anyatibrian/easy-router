@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MapsView component should handle the ontext change 1`] = `ShallowWrapper {}`;
+
 exports[`MapsView component should test map state to props 1`] = `
 Object {
   "loading": true,
