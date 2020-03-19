@@ -22,5 +22,5 @@ in the .env file following examples from env-example.text and you will be good t
 
 ### to run test locally
 run ` yarn test`
-### to run the app localy
+### to run the app locally
 run ` react-native run-android `
